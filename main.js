@@ -1,8 +1,23 @@
+'use strict';
 const slides = document.querySelectorAll('.slide');
 const btns = document.querySelectorAll('.btn');
-
-
+const img = document.querySelectorAll('.img');
+const message = document.querySelectorAll('.message');
+const name = document.querySelectorAll('.name');
+import { card } from './data.js';
 // 버튼이 클릭되면 함수 실행 , 내가 클릭한 버튼의 인덱스가 인수로 들어옴
+
+
+
+  card.forEach((item , i)=>{
+
+    name[i].textContent = item.name;
+    message[i].textContent = item.message;
+    img[i].scr = item.img;
+    }
+  )
+
+
 const manualNav = (manual)=>{ 
   // 초기화
   slides.forEach((slide)=>{
@@ -26,6 +41,7 @@ btns.forEach((btn , index)=>{
 
 // 자동 슬라이드 함수
 const autoSlider = () => {
+  
   // 현재 active클래스가 있는 요소 선택
   const active =  document.getElementsByClassName('active');
   let i = 1;
@@ -60,7 +76,7 @@ const autoSlider = () => {
 
   repeater(); //repeater함수 실행 시작
 }
-// 페이지가 로드될 때 자동 슬라이더를 시작하기 위해 마지막에 함수 호출
+// // 페이지가 로드될 때 자동 슬라이더를 시작하기 위해 마지막에 함수 호출
 autoSlider();
 
 

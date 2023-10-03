@@ -81,6 +81,8 @@ body{
   width: 100%;
   text-align: center;
   clip-path: circle(0% at 0 50%);
+  width: 100%;
+  height: 100%;
 }
 /* 슬라이드 효과 */
 .slide.active{
@@ -117,6 +119,7 @@ body{
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 10;
 }
 .navigation .btn{
   background-color: white;
@@ -158,4 +161,44 @@ body{
     margin-top: 40px;
   }
   
+}
+
+/* 카드 내용 */
+.img{
+  display: block;
+  width: 45%;
+  aspect-ratio : 400/400;
+  object-fit:cover;
+  background-color: rgb(240, 239, 239);
+  position: absolute;
+  border-radius: 40px;
+  top: 55px;
+  right: 80px;
+}
+.contents{
+
+  width: 50%;
+
+}
+.color{
+  background-color: coral;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Dancing Script';
+  font-weight: 500;
+
+}
+.message{
+  font-size: 2.5rem;
+  border-bottom: 1px dashed #fff;
+  margin-bottom: 10px;
+}
+.name{
+  font-size: 2rem;
+  margin-top: 20px;
 }
